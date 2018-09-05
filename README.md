@@ -41,8 +41,8 @@ Create file `examplescript.ts` and add the following content:
 ```
 #!ts-runner
 
-const value: string = 'Hello ts-runner';
-console.log(value);
+const value: string = 'World';
+console.log('Hello', value);
 ```
 
 Set the script file executable:
