@@ -1,0 +1,12 @@
+#!/bin/bash
+
+tsFile=$1
+
+md5=$(md5sum $tsFile | awk '{print $1}')
+jsFile="/tmp/tsrunner_${md5}.js"
+
+if [ ! -e $jsFile ]; then
+	tsc --outFile $jsFile $tsFile
+fi
+nodejs $jsFile
+
